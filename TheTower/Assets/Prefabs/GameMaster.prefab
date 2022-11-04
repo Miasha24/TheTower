@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPhaseTime: {fileID: 11400000, guid: 98ad2dd81071d884094549ee3a56e6a1, type: 2}
+  currentPhaseLength: {fileID: 11400000, guid: 41cc102c569a72748a29852bf624db54, type: 2}
   currentSpawnTime: {fileID: 11400000, guid: 223672cb7495ef0458ecc30196b47e69, type: 2}
   spawnDelay: {fileID: 11400000, guid: 5a935a9fa350f5f49807ce95b8fdad20, type: 2}
   spawnPhaseLength: {fileID: 11400000, guid: a739ab1ba823c924187e7a247d5a0426, type: 2}

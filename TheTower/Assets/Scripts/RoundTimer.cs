@@ -6,12 +6,11 @@ using UnityEngine.UI;
 public class RoundTimer : MonoBehaviour
 {
     public Image image;
-    public GameMaster master;
-
+    public FloatVariable currentPhaseLength, currentPhaseTime;
 
     // Update is called once per frame
     void Update()
     {
-        image.fillAmount = master.GetRoundTimePercent();
+        image.fillAmount = (currentPhaseLength.v - (currentPhaseTime.v - Time.time)) / currentPhaseLength.v;
     }
 }

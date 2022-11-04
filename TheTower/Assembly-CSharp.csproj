@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\Upgrader.cs" />
+    <Compile Include="Assets\ScriptableObjects\IntVariable.cs" />
+    <Compile Include="Assets\ScriptableObjects\FloatVariable.cs" />
     <Compile Include="Assets\Scripts\RoundTimer.cs" />
     <Compile Include="Assets\Scripts\Tower.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
@@ -65,8 +67,6 @@
     <Compile Include="Assets\Scripts\Combatant.cs" />
     <Compile Include="Assets\Scripts\TextPopup.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
-    <Compile Include="Assets\ScriptableObjects\FloatVariable.cs" />
-    <Compile Include="Assets\ScriptableObjects\IntVariable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

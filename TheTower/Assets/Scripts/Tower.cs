@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Tower : Combatant
 {
-
+    public FloatVariable health, healthMax, attackDamage, attackDelay, nextAttack;
     public List<Combatant> enemies = new List<Combatant>();
 
     // Start is called before the first frame update
     void Start()
     {
-        Startup();
+        health.v = healthMax.v;
     }
 
     // Update is called once per frame
@@ -37,5 +37,32 @@ public class Tower : Combatant
     protected override void OnKill()
     {
         enemies.Remove(enemies[0]);
+    }
+
+    public override bool TakeDamage(float amount)
+    {
+        health.v -= amount;
+
+        GameObject text = Instantiate(floatingText, transform.position, Quaternion.identity);
+        text.transform.GetChild(0).GetComponent<TextMesh>().text = amount.ToString();
+
+        if (health.v <= 0)
+        {
+            OnDeath();
+            return true;
+        }
+        return false;
+    }
+
+    protected override void Attack(Combatant target)
+    {
+        if (Time.time > nextAttack.v)
+        {
+            nextAttack.v = Time.time + attackDelay.v;
+            if (target.TakeDamage(attackDamage.v))
+            {
+                OnKill();
+            }
+        }
     }
 }

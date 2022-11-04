@@ -4,19 +4,12 @@ using UnityEngine;
 
 public abstract class Combatant : MonoBehaviour
 {
-    public float health, healthMax, attackDamage, attackDelay;
-
-    private float nextAttack;
     public GameObject floatingText;
 
     protected abstract void OnDeath();
     protected abstract void OnKill();
-    protected void Startup()
-    {
-        health = healthMax;
-    }
 
-    public bool TakeDamage(float amount)
+    public abstract bool TakeDamage(float amount);/*
     {
         health -= amount;
 
@@ -29,9 +22,9 @@ public abstract class Combatant : MonoBehaviour
             return true;
         }
         return false;
-    }
+    }*/
 
-    protected void Attack(Combatant target)
+    protected abstract void Attack(Combatant target);/*
     {
         if (Time.time > nextAttack)
         {
@@ -41,5 +34,5 @@ public abstract class Combatant : MonoBehaviour
                 OnKill();
             }
         }
-    }
+    }*/
 }

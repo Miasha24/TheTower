@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour
 {
-    public FloatVariable currentPhaseTime, currentSpawnTime, spawnDelay, spawnPhaseLength, waitPhaseLength;
+    public FloatVariable currentPhaseTime, currentPhaseLength, currentSpawnTime, spawnDelay, spawnPhaseLength, waitPhaseLength;
     public IntVariable roundNumber;
     public GameObject enemy;
 
@@ -12,22 +12,10 @@ public class GameMaster : MonoBehaviour
 
     private float spawnRange = 20;
 
-    public float GetRoundTimePercent()
-    {
-        if (spawning)
-        {
-            return (spawnPhaseLength.v - (currentPhaseTime.v - Time.time)) / spawnPhaseLength.v;
-        }
-        else
-        {
-            return (waitPhaseLength.v - (currentPhaseTime.v - Time.time)) / waitPhaseLength.v;
-        }
-    }
-
-
     // Start is called before the first frame update
     void Start()
     {
+        currentPhaseLength.v = spawnPhaseLength.v;
         currentPhaseTime.v = Time.time + spawnPhaseLength.v;
     }
 
@@ -49,10 +37,12 @@ public class GameMaster : MonoBehaviour
         {
             if (spawning)
             {   //If done spawning, set the wait time
+                currentPhaseLength.v = waitPhaseLength.v;
                 currentPhaseTime.v = Time.time + waitPhaseLength.v;
             }
             else
             {   //If done waiting, set the spawn time and start a new round!
+                currentPhaseLength.v = spawnPhaseLength.v;
                 currentPhaseTime.v = Time.time + spawnPhaseLength.v;
 
                 roundNumber.RuntimeValue++;

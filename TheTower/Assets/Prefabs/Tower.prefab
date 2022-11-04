@@ -85,11 +85,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70dcceac5f1d9214293e731e8413efd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floatingText: {fileID: 8579986757154285639, guid: be24444ebf6b3e544afc1e784d72aa6f, type: 3}
   health: {fileID: 11400000, guid: 342c071f4d8c10e44970e5ae41f9cd0a, type: 2}
   healthMax: {fileID: 11400000, guid: 21710f2df92019e40b2ba759619611d1, type: 2}
   attackDamage: {fileID: 11400000, guid: c6d688e3c2ec0274aa30e9b89d25ef5e, type: 2}
   attackDelay: {fileID: 11400000, guid: 353ac7b61a8412f4a8786c83e88a2889, type: 2}
-  floatingText: {fileID: 8579986757154285639, guid: be24444ebf6b3e544afc1e784d72aa6f, type: 3}
+  nextAttack: {fileID: 11400000, guid: ea3c9f3f6c1e99b48b9760717a86999e, type: 2}
   enemies: []
 --- !u!114 &3036885866387781499
 MonoBehaviour:

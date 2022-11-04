@@ -167,4 +167,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 4654191734581071043}
-  master: {fileID: 0}
+  currentPhaseLength: {fileID: 11400000, guid: 41cc102c569a72748a29852bf624db54, type: 2}
+  currentPhaseTime: {fileID: 11400000, guid: 98ad2dd81071d884094549ee3a56e6a1, type: 2}

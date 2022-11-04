@@ -147,11 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83601221a1ef90f4cba642229f61ebe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxHealth: 10
-  attackDelay: 1
-  attackDamage: 1
   floatingText: {fileID: 8579986757154285639, guid: be24444ebf6b3e544afc1e784d72aa6f, type: 3}
+  health: 0
+  healthMax: 10
+  attackDamage: 1
+  attackDelay: 1
+  nextAttack: 0
 --- !u!1 &8210103798752677531
 GameObject:
   m_ObjectHideFlags: 0
