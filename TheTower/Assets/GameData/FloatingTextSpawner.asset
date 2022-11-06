@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c58a141e73e3010449b0216c908fe934, type: 3}
-  m_Name: PlayerAttackDelay
+  m_Script: {fileID: 11500000, guid: e6a32b77f6361ce498f9690828324634, type: 3}
+  m_Name: FloatingTextSpawner
   m_EditorClassIdentifier: 
-  InitialValue: 0.8
+  floatingText: {fileID: 8579986757154285639, guid: be24444ebf6b3e544afc1e784d72aa6f, type: 3}

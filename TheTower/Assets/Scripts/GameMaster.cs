@@ -2,21 +2,53 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class GameMaster : MonoBehaviour
 {
-    public FloatVariable currentPhaseTime, currentPhaseLength, currentSpawnTime, spawnDelay, spawnPhaseLength, waitPhaseLength;
-    public IntVariable roundNumber;
-    public GameObject enemy;
+    [System.Serializable]
+    public class RoundVariables
+    {
+        [Header("Phase lengths")]
+        public FloatVariable currentPhaseLength;
+        public FloatVariable spawnPhaseLength;
+        public FloatVariable waitPhaseLength;
+        [Header("Runtime pointers")]
+        public FloatVariable currentPhaseTime;
+        public IntVariable roundNumber;
+    }
+    [System.Serializable]
+    public class EnemyVariables
+    {
+        public GameObject enemy;
+        public FloatVariable baseAttackDamage;
+        public FloatVariable baseAttackSpeed;
+        public FloatVariable baseHealthMax;
+        public FloatVariable baseMovementSpeed;
+        public FloatVariable baseCoinDrop;
+    }
+    [System.Serializable]
+    public class SpawningVariables
+    {
+        public FloatVariable spawnDelay;
+        public FloatVariable currentSpawnTime;
+        public float spawnRange;
+        [System.NonSerialized]
+        public bool spawning;
+    }
 
-    private bool spawning = true;
 
-    private float spawnRange = 20;
+    public RoundVariables round;
+    public EnemyVariables enemy;
+    public SpawningVariables spawning;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        currentPhaseLength.v = spawnPhaseLength.v;
-        currentPhaseTime.v = Time.time + spawnPhaseLength.v;
+        round.currentPhaseLength.v = round.spawnPhaseLength.v;
+        round.currentPhaseTime.v = Time.time + round.spawnPhaseLength.v;
     }
 
 
@@ -24,32 +56,42 @@ public class GameMaster : MonoBehaviour
     void Update()
     {
 
-        if (spawning && Time.time > currentSpawnTime.v)
+        if (spawning.spawning && Time.time > spawning.currentSpawnTime.v)
         {
-            currentSpawnTime.v = Time.time + spawnDelay.v;
+            spawning.currentSpawnTime.v = Time.time + spawning.spawnDelay.v;
 
-            var vector2 = Random.insideUnitCircle.normalized * spawnRange;
-            Instantiate(enemy, vector2, Quaternion.identity);
+            var vector2 = Random.insideUnitCircle.normalized * spawning.spawnRange;
+            Instantiate(enemy.enemy, vector2, Quaternion.identity);
         }
 
 
-        if (Time.time > currentPhaseTime.v)
+        if (Time.time > round.currentPhaseTime.v)
         {
-            if (spawning)
+            if (spawning.spawning)
             {   //If done spawning, set the wait time
-                currentPhaseLength.v = waitPhaseLength.v;
-                currentPhaseTime.v = Time.time + waitPhaseLength.v;
+                round.currentPhaseLength.v = round.waitPhaseLength.v;
+                round.currentPhaseTime.v = Time.time + round.waitPhaseLength.v;
             }
             else
             {   //If done waiting, set the spawn time and start a new round!
-                currentPhaseLength.v = spawnPhaseLength.v;
-                currentPhaseTime.v = Time.time + spawnPhaseLength.v;
+                round.currentPhaseLength.v = round.spawnPhaseLength.v;
+                round.currentPhaseTime.v = Time.time + round.spawnPhaseLength.v;
 
-                roundNumber.RuntimeValue++;
-                spawnDelay.v *= 0.9f;
+                NewRound();
             }
             //Change spawning state
-            spawning = !spawning;
+            spawning.spawning = !spawning.spawning;
         }
     }
+
+
+    private void NewRound()
+    {
+        round.roundNumber.RuntimeValue++;
+        spawning.spawnDelay.v *= 0.9f;
+
+        Debug.Log("Upgrade the enemies!");
+    }
 }
+
+

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5310171700503453973}
   - component: {fileID: 4663184202760981729}
   - component: {fileID: 7660374795176430235}
-  - component: {fileID: 3036885866387781499}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -89,24 +88,8 @@ MonoBehaviour:
   health: {fileID: 11400000, guid: 342c071f4d8c10e44970e5ae41f9cd0a, type: 2}
   healthMax: {fileID: 11400000, guid: 21710f2df92019e40b2ba759619611d1, type: 2}
   attackDamage: {fileID: 11400000, guid: c6d688e3c2ec0274aa30e9b89d25ef5e, type: 2}
-  attackDelay: {fileID: 11400000, guid: 353ac7b61a8412f4a8786c83e88a2889, type: 2}
-  nextAttack: {fileID: 11400000, guid: ea3c9f3f6c1e99b48b9760717a86999e, type: 2}
+  attackSpeed: {fileID: 11400000, guid: 353ac7b61a8412f4a8786c83e88a2889, type: 2}
   enemies: []
---- !u!114 &3036885866387781499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7775036885903225722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07060197e24a04440b45867d3ca36356, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamageAmount: 0
-  attackSpeedAmount: 0
-  healthMaxAmount: 0
 --- !u!1 &8226978226839631636
 GameObject:
   m_ObjectHideFlags: 0
