@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Tower : Combatant
 {
-    public FloatVariable health, healthMax, attackDamage, attackDelay, nextAttack;
+    public FloatVariable health, healthMax, attackDamage, attackSpeed;
+    private float nextAttack;
     public List<Combatant> enemies = new List<Combatant>();
 
     // Start is called before the first frame update
@@ -56,9 +57,9 @@ public class Tower : Combatant
 
     protected override void Attack(Combatant target)
     {
-        if (Time.time > nextAttack.v)
+        if (Time.time > nextAttack)
         {
-            nextAttack.v = Time.time + attackDelay.v;
+            nextAttack = Time.time + (1 / attackSpeed.v);
             if (target.TakeDamage(attackDamage.v))
             {
                 OnKill();

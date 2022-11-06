@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : Combatant
 {
-    public float health, healthMax, attackDamage, attackDelay, nextAttack;
+    private float health, healthMax, attackDamage, attackSpeed, nextAttack, moveSpeed, coinDropAmount;
+    public FloatVariable baseAttackDamage, baseAttackSpeed, baseHealthMax, baseMovementSpeed, baseCoinDropAmount, targetCoinAmount;
+    public FloatingTextSpawner textSpawner;
 
-    private float speed = 4.0f;
     private Vector2 target;
     private bool attacking = false;
     private Combatant tower;
@@ -14,6 +15,13 @@ public class Enemy : Combatant
     // Start is called before the first frame update
     void Start()
     {
+        healthMax = baseHealthMax.v;
+        attackDamage = baseAttackDamage.v;
+        attackSpeed = baseAttackSpeed.v;
+        moveSpeed = baseMovementSpeed.v;
+        coinDropAmount = baseCoinDropAmount.v;
+
+
         health = healthMax;
         target = new Vector2(0.0f, 0.0f);
     }
@@ -21,7 +29,7 @@ public class Enemy : Combatant
     // Update is called once per frame
     void Update()
     {
-        float step = speed * Time.deltaTime;
+        float step = moveSpeed * Time.deltaTime;
         transform.position = Vector2.MoveTowards(transform.position, target, step);
         if (attacking)
         {
@@ -42,20 +50,20 @@ public class Enemy : Combatant
 
     protected override void OnKill()
     {
-        throw new System.NotImplementedException();
+        //throw new System.NotImplementedException();
     }
 
     protected override void OnDeath()
     {
+        targetCoinAmount.v += coinDropAmount;
+        textSpawner.InitSpawnText(transform.position, coinDropAmount.ToString(), Color.yellow, 0.3f);
         Destroy(gameObject);
     }
 
     public override bool TakeDamage(float amount)
     {
         health -= amount;
-
-        GameObject text = Instantiate(floatingText, transform.position, Quaternion.identity);
-        text.transform.GetChild(0).GetComponent<TextMesh>().text = amount.ToString();
+        textSpawner.InitSpawnText(transform.position, amount.ToString(), Color.white, 0);
 
         if (health <= 0)
         {
@@ -69,7 +77,7 @@ public class Enemy : Combatant
     {
         if (Time.time > nextAttack)
         {
-            nextAttack = Time.time + attackDelay;
+            nextAttack = Time.time + (1 / attackSpeed);
             if (target.TakeDamage(attackDamage))
             {
                 OnKill();
