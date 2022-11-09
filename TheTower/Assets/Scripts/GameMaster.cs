@@ -22,11 +22,9 @@ public class GameMaster : MonoBehaviour
     public class EnemyVariables
     {
         public GameObject enemy;
-        public FloatVariable baseAttackDamage;
-        public FloatVariable baseAttackSpeed;
-        public FloatVariable baseHealthMax;
-        public FloatVariable baseMovementSpeed;
-        public FloatVariable baseCoinDrop;
+        public Upgrader baseAttackDamage;
+        public Upgrader baseHealthMax;
+        public Upgrader baseCoinDrop;
     }
     [System.Serializable]
     public class SpawningVariables
@@ -49,6 +47,7 @@ public class GameMaster : MonoBehaviour
     {
         round.currentPhaseLength.v = round.spawnPhaseLength.v;
         round.currentPhaseTime.v = Time.time + round.spawnPhaseLength.v;
+        spawning.spawning = true;
     }
 
 
@@ -89,8 +88,10 @@ public class GameMaster : MonoBehaviour
     {
         round.roundNumber.RuntimeValue++;
         spawning.spawnDelay.v *= 0.9f;
-
-        Debug.Log("Upgrade the enemies!");
+        float output;
+        enemy.baseHealthMax.Upgrade(out output, out output);
+        enemy.baseAttackDamage.Upgrade(out output, out output);
+        enemy.baseCoinDrop.Upgrade(out output, out output);
     }
 }
 

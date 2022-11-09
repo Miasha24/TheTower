@@ -11,7 +11,7 @@ public class UpgradeButton : MonoBehaviour
 
     private void Start()
     {
-        text.text = statName + ": " + upgrader.upgradeTarget.v + "\nCoins: " + upgrader.priceCurrent;
+        text.text = statName + ": " + upgrader.GetTarget().v + "\nCoins: " + upgrader.GetPriceCurrent();
     }
 
     public void Upgrade()

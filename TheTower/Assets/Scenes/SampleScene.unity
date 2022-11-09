@@ -1081,9 +1081,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
+      propertyPath: enemy.enemy
+      value: 
+      objectReference: {fileID: 6928806464965300596, guid: 092ec90482e16e64399a1313b96b6266, type: 3}
+    - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
       propertyPath: round.roundNumber
       value: 
       objectReference: {fileID: 11400000, guid: f707cb7a5057fc64b8dda8974fa6d123, type: 2}
+    - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
+      propertyPath: enemy.baseCoinDrop
+      value: 
+      objectReference: {fileID: 11400000, guid: a61a3127c2f87bd44a1adb4f344563cf, type: 2}
+    - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
+      propertyPath: enemy.baseHealthMax
+      value: 
+      objectReference: {fileID: 11400000, guid: 27cf18a1b6213fd45845ed779acefa0f, type: 2}
     - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
       propertyPath: spawning.spawnDelay
       value: 
@@ -1093,9 +1105,17 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
+      propertyPath: enemy.baseAttackSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d5d3ccffbb4691458059344e95b07fc, type: 2}
+    - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
       propertyPath: round.waitPhaseLength
       value: 
       objectReference: {fileID: 11400000, guid: e85a34b672c7e0d44bd3bde7861bd746, type: 2}
+    - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
+      propertyPath: enemy.baseAttackDamage
+      value: 
+      objectReference: {fileID: 11400000, guid: 1bce38db5f4baa746bfd1206a6149a9c, type: 2}
     - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
       propertyPath: round.currentPhaseTime
       value: 
@@ -1104,6 +1124,10 @@ PrefabInstance:
       propertyPath: round.spawnPhaseLength
       value: 
       objectReference: {fileID: 11400000, guid: a739ab1ba823c924187e7a247d5a0426, type: 2}
+    - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
+      propertyPath: enemy.baseMovementSpeed
+      value: 
+      objectReference: {fileID: 11400000, guid: 542545fe68f216c49ac2d2dbd48b0cc3, type: 2}
     - target: {fileID: 6724826125971921589, guid: 000f69ce5a61caf4eb500fc75743f73c, type: 3}
       propertyPath: round.currentPhaseLength
       value: 
