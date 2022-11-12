@@ -8,7 +8,7 @@ public class Tower : Combatant
     [SerializeField]
     private FloatVariable health, healthMax, attackDamage, attackSpeed;
     [SerializeField]
-    private BasicAttack basicAttack;
+    private AttackHoming basicAttack;
     private float nextAttack;
     [SerializeField]
     private List<Combatant> enemies = new List<Combatant>();
@@ -81,7 +81,7 @@ public class Tower : Combatant
         if (Time.time > nextAttack)
         {
             nextAttack = Time.time + (1 / attackSpeed.v);
-            Instantiate(basicAttack, transform.position, Quaternion.identity, transform).SetTarget(target);
+            Instantiate(basicAttack, transform.position, Quaternion.identity, transform).Initialize(target);
             /*
             if (target.TakeDamage(attackDamage.v))
             {

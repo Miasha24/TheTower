@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlayerAttackSpeed
   m_EditorClassIdentifier: 
   InitialValue: 1
+  v: 1

@@ -85,11 +85,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingText: {fileID: 8579986757154285639, guid: be24444ebf6b3e544afc1e784d72aa6f, type: 3}
+  dead: 0
   health: {fileID: 11400000, guid: 342c071f4d8c10e44970e5ae41f9cd0a, type: 2}
   healthMax: {fileID: 11400000, guid: 21710f2df92019e40b2ba759619611d1, type: 2}
   attackDamage: {fileID: 11400000, guid: c6d688e3c2ec0274aa30e9b89d25ef5e, type: 2}
   attackSpeed: {fileID: 11400000, guid: 353ac7b61a8412f4a8786c83e88a2889, type: 2}
-  basicAttack: {fileID: 8025512025497637226, guid: 46e11df18969d9747a2c9b9de38812b0, type: 3}
+  basicAttack: {fileID: -4917947546790985940, guid: 9f454271974c53c47b1b34d81e81b6a9, type: 3}
+  enemies: []
 --- !u!1 &8226978226839631636
 GameObject:
   m_ObjectHideFlags: 0
