@@ -24,10 +24,13 @@ public class Tower : Combatant
     {
         if (enemies.Count > 0)
         {
-            if (!enemies[0].dead)
+            if (enemies[0].dead) {
+                enemies.RemoveAt(0);
+            } 
+            else 
             {
                 Attack(enemies[0]);
-            }
+            }        
         }
     }
 
