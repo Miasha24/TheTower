@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c58a141e73e3010449b0216c908fe934, type: 3}
   m_Name: BaseAttackDamage
   m_EditorClassIdentifier: 
-  InitialValue: 0.5
+  InitialValue: 1
+  v: 1

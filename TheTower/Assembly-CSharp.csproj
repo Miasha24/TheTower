@@ -71,6 +71,11 @@
     <Compile Include="Assets\Scripts\Combatant.cs" />
     <Compile Include="Assets\Scripts\TextPopup.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
+    <Compile Include="Assets\UiText.cs" />
+    <Compile Include="Assets\Scripts\Projectile.cs" />
+    <Compile Include="Assets\Scripts\BasicAttack.cs" />
+    <Compile Include="Assets\ScriptableObjects\GameEvent.cs" />
+    <Compile Include="Assets\Scripts\GameEventListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

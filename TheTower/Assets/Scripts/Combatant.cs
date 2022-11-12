@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Combatant : MonoBehaviour
 {
     public GameObject floatingText;
-
+    public bool dead = false;
     protected abstract void OnDeath();
     protected abstract void OnKill();
 

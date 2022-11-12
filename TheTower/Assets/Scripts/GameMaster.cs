@@ -16,7 +16,7 @@ public class GameMaster : MonoBehaviour
         public FloatVariable waitPhaseLength;
         [Header("Runtime pointers")]
         public FloatVariable currentPhaseTime;
-        public IntVariable roundNumber;
+        public FloatVariable roundNumber;
     }
     [System.Serializable]
     public class EnemyVariables
@@ -86,7 +86,7 @@ public class GameMaster : MonoBehaviour
 
     private void NewRound()
     {
-        round.roundNumber.RuntimeValue++;
+        round.roundNumber.v++;
         spawning.spawnDelay.v *= 0.9f;
         float output;
         enemy.baseHealthMax.Upgrade(out output, out output);

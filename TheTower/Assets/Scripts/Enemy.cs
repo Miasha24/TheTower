@@ -7,6 +7,8 @@ public class Enemy : Combatant
     private float health, healthMax, attackDamage, attackSpeed, nextAttack, moveSpeed, coinDropAmount;
     public FloatVariable baseAttackDamage, baseAttackSpeed, baseHealthMax, baseMovementSpeed, baseCoinDropAmount, targetCoinAmount;
     public FloatingTextSpawner textSpawner;
+    [SerializeField]
+    private GameEvent gameEvent;
 
     private Vector2 target;
     private bool attacking = false;
@@ -57,6 +59,8 @@ public class Enemy : Combatant
     {
         targetCoinAmount.v += coinDropAmount;
         textSpawner.InitSpawnText(transform.position, coinDropAmount.ToString(), Color.yellow, 0.3f);
+        dead = true;
+        gameEvent.Raise();
         Destroy(gameObject);
     }
 

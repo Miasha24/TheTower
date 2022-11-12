@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1b021ca6ebd5bce47b057fb31a17c62d, type: 3}
-  m_Name: EnemyBaseHealth
+  m_Name: UpgraderEnemyBaseCoinAmount
   m_EditorClassIdentifier: 
-  upgradeAmountInit: 0.19
-  upgradeIncreaseInit: 1.05
+  upgradeAmountInit: 0.05
+  upgradeIncreaseInit: 1.02
   priceCurrentInit: 0
   priceIncreaseInit: 0
   free: 1
   coins: {fileID: 0}
-  upgradeTarget: {fileID: 11400000, guid: b7c8c735108ac914db16cee452396f2f, type: 2}
+  upgradeTarget: {fileID: 11400000, guid: 527224f161c834b48a136eaed83f2dd3, type: 2}

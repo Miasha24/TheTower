@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingText: {fileID: 8579986757154285639, guid: be24444ebf6b3e544afc1e784d72aa6f, type: 3}
+  dead: 0
   baseAttackDamage: {fileID: 11400000, guid: 219d5f280cb050445be6511417c329f9, type: 2}
   baseAttackSpeed: {fileID: 11400000, guid: 0d5d3ccffbb4691458059344e95b07fc, type: 2}
   baseHealthMax: {fileID: 11400000, guid: b7c8c735108ac914db16cee452396f2f, type: 2}
@@ -155,6 +156,7 @@ MonoBehaviour:
   baseCoinDropAmount: {fileID: 11400000, guid: 527224f161c834b48a136eaed83f2dd3, type: 2}
   targetCoinAmount: {fileID: 11400000, guid: e54eda04fb126214c962d8fa0b9aaa5d, type: 2}
   textSpawner: {fileID: 11400000, guid: 57cba13a10d81e8438a82f844348ddc1, type: 2}
+  gameEvent: {fileID: 11400000, guid: 6dfb955930b24e3499256cae74ffa61d, type: 2}
 --- !u!1 &8210103798752677531
 GameObject:
   m_ObjectHideFlags: 0

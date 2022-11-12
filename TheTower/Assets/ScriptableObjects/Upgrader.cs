@@ -62,7 +62,7 @@ public class Upgrader : ScriptableObject, ISerializationCallbackReceiver
 
     //Getters
     public FloatVariable GetTarget() { return target; }
-    public float GetPriceCurrent() { return priceIncreaseCurrent; }
+    public float GetPriceCurrent() { return priceCurrent; }
 
 
     public void OnAfterDeserialize()
@@ -103,6 +103,7 @@ public class Upgrader : ScriptableObject, ISerializationCallbackReceiver
                     priceCurrent *= coinsIncreaseGrowth.exponentialIncreaseAmount;
                     coinsIncreaseGrowth.exponentialIncreaseAmount *= coinsIncreaseGrowth.exponentialIncreaseGrowth;
                 }
+                newPrice = priceCurrent;
             }
             else
             {
@@ -122,10 +123,10 @@ public class Upgrader : ScriptableObject, ISerializationCallbackReceiver
             priceCurrent *= targetIncreaseGrowth.exponentialIncreaseAmount;
             targetIncreaseGrowth.exponentialIncreaseAmount *= targetIncreaseGrowth.exponentialIncreaseGrowth;
         }
-
+        newStat = target.v;
 
         numberOfUpgradesCurrent++;
-        if (numberOfUpgradesCurrent > numberOfUpgradesMax)
+        if (numberOfUpgradesCurrent > numberOfUpgradesMax && numberOfUpgradesMax != 0)
         {
             enabled = false;
         }

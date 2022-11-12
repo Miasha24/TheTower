@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b021ca6ebd5bce47b057fb31a17c62d, type: 3}
+  m_Name: UpgraderEnemyBaseMovementSpeed
+  m_EditorClassIdentifier: 
+  enabled: 1
+  free: 1
+  numberOfUpgradesCurrent: 0
+  numberOfUpgradesMax: 0
+  targetValueMax: 5
+  targetValueMin: 0
+  target: {fileID: 11400000, guid: 542545fe68f216c49ac2d2dbd48b0cc3, type: 2}
+  coins: {fileID: 0}
+  targetIncreaseInit: 0.2
+  targetIncreaseCurrent: 0.2
+  priceInit: 0
+  priceCurrent: 0
+  priceIncreaseInit: 0
+  priceIncreaseCurrent: 0
+  targetIncreaseGrowth:
+    linearIncreaseEnable: 0
+    linearIncreaseAmount: 0
+    linearIncreasegrowth: 0
+    exponentialIncreaseEnable: 0
+    exponentialIncreaseAmount: 0
+    exponentialIncreaseGrowth: 0
+  coinsIncreaseGrowth:
+    linearIncreaseEnable: 0
+    linearIncreaseAmount: 0
+    linearIncreasegrowth: 0
+    exponentialIncreaseEnable: 0
+    exponentialIncreaseAmount: 0
+    exponentialIncreaseGrowth: 0

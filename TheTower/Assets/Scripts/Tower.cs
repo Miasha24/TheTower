@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Tower : Combatant
 {
-    public FloatVariable health, healthMax, attackDamage, attackSpeed;
+    [SerializeField]
+    private FloatVariable health, healthMax, attackDamage, attackSpeed;
+    [SerializeField]
+    private BasicAttack basicAttack;
     private float nextAttack;
-    public List<Combatant> enemies = new List<Combatant>();
+    [SerializeField]
+    private List<Combatant> enemies = new List<Combatant>();
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +24,10 @@ public class Tower : Combatant
     {
         if (enemies.Count > 0)
         {
-            Attack(enemies[0]);
+            if (!enemies[0].dead)
+            {
+                Attack(enemies[0]);
+            }
         }
     }
 
@@ -32,12 +40,22 @@ public class Tower : Combatant
 
     protected override void OnDeath()
     {
-        throw new System.NotImplementedException();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     protected override void OnKill()
     {
         enemies.Remove(enemies[0]);
+    }
+    public void OnKillEvent()
+    {
+        for (int i = enemies.Count - 1; i >= 0; i--)
+        {
+            if (enemies[i].dead)
+            {
+                enemies.RemoveAt(i);
+            }
+        }
     }
 
     public override bool TakeDamage(float amount)
@@ -60,10 +78,13 @@ public class Tower : Combatant
         if (Time.time > nextAttack)
         {
             nextAttack = Time.time + (1 / attackSpeed.v);
+            Instantiate(basicAttack, transform.position, Quaternion.identity, transform).SetTarget(target);
+            /*
             if (target.TakeDamage(attackDamage.v))
             {
                 OnKill();
             }
+            */
         }
     }
 }

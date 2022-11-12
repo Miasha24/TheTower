@@ -8,7 +8,7 @@ public class FloatVariable : ScriptableObject, ISerializationCallbackReceiver
 {
     public float InitialValue;
 
-    [ReadOnly] public float v;
+    public float v;
 
     public void OnAfterDeserialize()
     {

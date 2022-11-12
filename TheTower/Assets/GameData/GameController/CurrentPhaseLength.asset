@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CurrentPhaseLength
   m_EditorClassIdentifier: 
   InitialValue: 0
+  v: 0
