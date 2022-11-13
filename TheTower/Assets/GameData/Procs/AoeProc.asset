@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9d1c629b66f3f4abcd243748d809bb, type: 3}
-  m_Name: BasicAttackProc
+  m_Script: {fileID: 11500000, guid: fddf28f0b6272fd4b87bd466b5637f3e, type: 3}
+  m_Name: AoeProc
   m_EditorClassIdentifier: 
   procChance: 20
-  attack: {fileID: -4917947546790985940, guid: 9f454271974c53c47b1b34d81e81b6a9, type: 3}
-  radius: 10
+  attack: {fileID: 2027737079052815826, guid: ca42c9412a5c145468905c6131ef52aa, type: 3}

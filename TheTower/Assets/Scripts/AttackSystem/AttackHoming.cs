@@ -7,12 +7,10 @@ public class AttackHoming : Attack
     [SerializeField]
     private FloatVariable speed;
     [SerializeField]
-    private Proc proc;
+    private RuntimeSetProcs procs;
 
     private Combatant target;
 
-
-    public AttackAoe aoe;
 
     public void Initialize(Combatant target)
     {
@@ -38,8 +36,10 @@ public class AttackHoming : Attack
         if (collision.transform == target.transform)
         {
             DealDamage(new List<Combatant> { target });
-            Instantiate(aoe, transform.position, Quaternion.identity).Initialize(transform.position);
-            proc.CallProc(target);
+            foreach (Proc proc in procs.Items)
+            {
+                proc.CallProc(target);
+            }
             Finished();
         }
     }
