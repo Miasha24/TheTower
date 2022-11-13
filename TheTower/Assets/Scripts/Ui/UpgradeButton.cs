@@ -16,8 +16,10 @@ public class UpgradeButton : MonoBehaviour
 
     public void Upgrade()
     {
+        Debug.Log("Upgrade button pressed");
         if (upgrader.Upgrade(out float newPrice, out float newStat))
         {
+            Debug.Log("Upgrade success");
             text.text = statName + ": " + newStat + "\nCoins: " + newPrice;
         }
     }

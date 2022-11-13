@@ -1,0 +1,24 @@
+Defend your tower!
+
+Every round you can choose one of three upgrades
+
+Try combine upgrades that synergize to survive as long as possible!
+
+
+
+--------
+
+Different upgrades scale based off of 1 of 3 base stats: Offensive, Defensive, Utility
+
+Offensive scale upgrades that aim to destroy enemies before they even get close to your tower
+Examples of Offensive upgrades: Multishot, Cluster Bombs, Missiles
+
+Defensive scale upgrades that helps your tower survive when enemies gets close
+Examples of Defensive upgrades: Sword, Shield, Mines
+
+Utility scale upgrades that hinder and hurt your enemies in a variaty of different ways
+Examples of Utility upgrades: Frostbite, Mini-Towers, 
+
+Increasing a base stat costs coins, and no matter what stat is increased, all of them will increase in price.
+
+
