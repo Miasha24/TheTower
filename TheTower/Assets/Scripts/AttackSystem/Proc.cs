@@ -6,7 +6,7 @@ using UnityEngine;
 public abstract class Proc : ScriptableObject
 {
     [SerializeField]
-    protected float procChance;
+    public float procChance;
 
     public void CallProc(Combatant combatant)
     {
