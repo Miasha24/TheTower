@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "My Assets/Upgrades/ChainAttack")]
-public class UpgradeChainAttack : Upgrade
+[CreateAssetMenu(menuName = "My Assets/Upgrades/Explosion")]
+public class UpgradeExplosion : Upgrade
 {
     public Proc proc;
     public RuntimeSetProcs procsList;
@@ -26,6 +26,5 @@ public class UpgradeChainAttack : Upgrade
                 //Increase chain amount!
             }
         }
-        level++;
     }
 }

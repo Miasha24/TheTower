@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class Proc : ScriptableObject
+public abstract class Proc : ScriptableObject, ISerializationCallbackReceiver
 {
     [SerializeField]
+    private float procChanceInit;
     public float procChance;
 
     public void CallProc(Combatant combatant)
@@ -18,6 +19,12 @@ public abstract class Proc : ScriptableObject
 
     protected abstract void ExecuteProc(Combatant combatant);
 
+    public void OnBeforeSerialize() { }
+
+    public void OnAfterDeserialize()
+    {
+        procChance = procChanceInit;
+    }
 }
 
 

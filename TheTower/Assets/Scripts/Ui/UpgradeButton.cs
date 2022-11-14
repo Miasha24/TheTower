@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class UpgradeButton : MonoBehaviour
 {
+
+    /*
     public string statName;
     public Text text;
-    public Upgrader upgrader;
 
     private void Start()
     {
@@ -22,5 +23,5 @@ public class UpgradeButton : MonoBehaviour
             Debug.Log("Upgrade success");
             text.text = statName + ": " + newStat + "\nCoins: " + newPrice;
         }
-    }
+    }*/
 }
