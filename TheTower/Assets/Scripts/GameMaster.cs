@@ -40,7 +40,7 @@ public class GameMaster : MonoBehaviour
     public RoundVariables round;
     public EnemyVariables enemy;
     public SpawningVariables spawning;
-
+    public PowerSelector powerSelector;
 
     // Start is called before the first frame update
     void Start()
@@ -91,7 +91,9 @@ public class GameMaster : MonoBehaviour
         float output;
         enemy.baseHealthMax.Upgrade(out output, out output);
         enemy.baseAttackDamage.Upgrade(out output, out output);
-        enemy.baseCoinDrop.Upgrade(out output, out output);
+        //enemy.baseCoinDrop.Upgrade(out output, out output);
+
+        powerSelector.EnablePowerSelector();
     }
 }
 

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4eb7355c0eabc5844a1feb0ae1dea633, type: 3}
   m_Name: Explosion
   m_EditorClassIdentifier: 
+  upgradeName: Explosion
   rarity: 1
   level: 0
   currentUpgrades: {fileID: 11400000, guid: 3ecfd47a22bd2bb47b8225a78b4dee60, type: 2}

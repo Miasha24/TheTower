@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1640f6253033ca34a86b6d9b7655ba3c, type: 3}
   m_Name: BaseDamage
   m_EditorClassIdentifier: 
+  upgradeName: Base damage
   rarity: 0
   level: 0
   currentUpgrades: {fileID: 11400000, guid: 3ecfd47a22bd2bb47b8225a78b4dee60, type: 2}
