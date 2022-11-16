@@ -9,9 +9,9 @@ public class UpgradeStat : Upgrade
     public float upgradeAmount;
     public override void ApplyUpgrade()
     {
-        if (!currentUpgrades.Items.Contains(this))
+        if (!currentUpgrades.items.Contains(this))
         {
-            currentUpgrades.Items.Add(this);
+            currentUpgrades.items.Add(this);
         }
         stat.v += upgradeAmount;
         level++;

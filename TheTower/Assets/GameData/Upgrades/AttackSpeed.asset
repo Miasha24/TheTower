@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: AttackSpeed
   m_EditorClassIdentifier: 
   upgradeName: Attack speed
+  rarityInit: 0
   rarity: 0
+  levelInit: 0
   level: 0
   currentUpgrades: {fileID: 11400000, guid: 3ecfd47a22bd2bb47b8225a78b4dee60, type: 2}
   stat: {fileID: 11400000, guid: 353ac7b61a8412f4a8786c83e88a2889, type: 2}
-  upgradeAmount: 1
+  upgradeAmount: 0.25

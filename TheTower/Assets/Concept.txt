@@ -1,24 +1,55 @@
-Defend your tower!
+Help defend your magic cauldron!
 
-Every round you can choose one of three upgrades
+Monsters, spirits, and more are trying to steal it for its power.
 
-Try combine upgrades that synergize to survive as long as possible!
-
-
-
---------
-
-Different upgrades scale based off of 1 of 3 base stats: Offensive, Defensive, Utility
-
-Offensive scale upgrades that aim to destroy enemies before they even get close to your tower
-Examples of Offensive upgrades: Multishot, Cluster Bombs, Missiles
-
-Defensive scale upgrades that helps your tower survive when enemies gets close
-Examples of Defensive upgrades: Sword, Shield, Mines
-
-Utility scale upgrades that hinder and hurt your enemies in a variaty of different ways
-Examples of Utility upgrades: Frostbite, Mini-Towers, 
-
-Increasing a base stat costs coins, and no matter what stat is increased, all of them will increase in price.
+Create a chaotic brew to ward off the attackers!
 
 
+------------------------------------------------------------
+
+
+Each wave you get the opportunity to choose 1 upgrade.
+
+These upgrades vary wildly, but will all help defend the cauldron.
+
+The chance for different upgrades to show are based on their rarity.
+
+The upgrades have different rarities: Common, rare, legendary.
+
+Choosing the same upgrade twice makes it stronger.
+
+
+------------------------------------------------------------
+
+
+Basic attack: Throws potion at closest enemy. Damages a single target
+
+Bat attack: Summon a bat that repeatedly attacks the same enemy. Finds other enemy if target dies.
+
+Tentacle swipe: Summon tentacle that swipes 90° and pushes all targets into a line.
+
+Bonearang: Throws a bone boomerang that bounces between targets.
+
+Caustic spill: Spills caustic brew from the cauldron, causing any enemies standing in it to be slowed and take damage.
+
+Volatile brew: Causes explosion when hit, knocking enemies back.
+
+Cluster potion: Throws a potion that explodes and causes multiple smaller potions to explode
+
+Magical fizzle: Three fizzles fly out and towards different targets, damaging them on impact.
+
+Fuel for the fire: Enemy deaths causes the cauldron to buble more intensly, making attacks faster.
+
+Hell portal: Causes a random effect each time it is opened
+	A small imp spawns and attacks enemies.
+	A part of the room is set on fire.
+	A fireball is thrown at the biggest enemy
+
+Void portal: Teleports closest enemy away from the cauldron, causing it to take damage on the way
+
+Stargazing: Causes a starsign to form around some enemies, based on the sign, a different debuff is applied to the enemy
+	cancer: Causes targets to get increasingly slower to a limit.
+	libra: halves the enemies health (?)
+	Aries: Pushes enemy away
+
+hg

@@ -9,9 +9,9 @@ public class UpgradeExplosion : Upgrade
     public RuntimeSetProcs procsList;
     public override void ApplyUpgrade()
     {
-        if (!currentUpgrades.Items.Contains(this))
+        if (!currentUpgrades.items.Contains(this))
         {
-            currentUpgrades.Items.Add(this);
+            currentUpgrades.items.Add(this);
             proc.procChance = 20;
             procsList.Add(proc);
         }

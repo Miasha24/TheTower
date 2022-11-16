@@ -36,7 +36,7 @@ public class AttackHoming : Attack
         if (collision.transform == target.transform)
         {
             DealDamage(new List<Combatant> { target });
-            foreach (Proc proc in procs.Items)
+            foreach (Proc proc in procs.items)
             {
                 proc.CallProc(target);
             }

@@ -2,11 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Upgrade : ScriptableObject
+public abstract class Upgrade : ScriptableObject, ISerializationCallbackReceiver
 {
     public string upgradeName;
-    [SerializeField] private int rarity;
-    public int level = 0;
+    [SerializeField] protected int rarityInit;
+    [SerializeField] protected int rarity;
+    [SerializeField] protected int levelInit;
+    [SerializeField] protected int level;
     public RuntimeSetUpgrades currentUpgrades;
+
     public abstract void ApplyUpgrade();
+
+    public void OnBeforeSerialize() { }
+
+    public void OnAfterDeserialize()
+    {
+        rarity = rarityInit;
+        level = levelInit;
+    }
 }
