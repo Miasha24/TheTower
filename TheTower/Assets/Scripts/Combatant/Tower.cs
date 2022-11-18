@@ -13,9 +13,15 @@ public class Tower : Combatant
     [SerializeField]
     private List<Combatant> enemies = new List<Combatant>();
 
+    [SerializeField] private float tentacleCooldown;
+    private float tentacleTime;
+    [SerializeField] private TentacleSwipe tentacleSwipe;
+    private int enemyLayer;
+
     // Start is called before the first frame update
     void Start()
     {
+        enemyLayer = LayerMask.NameToLayer("Enemy");
         health.v = healthMax.v;
     }
 
@@ -29,16 +35,25 @@ public class Tower : Combatant
             } 
             else 
             {
-                Attack(enemies[0]);
+
+                //Attack(enemies[0]);
             }        
+        }
+        if (tentacleTime <= Time.time)
+        {
+            tentacleTime = Time.time + tentacleCooldown;
+            Instantiate(tentacleSwipe).Initialize(0, 359, true);
         }
     }
 
     //When enemies enters attack range
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Combatant enemy = collision.gameObject.GetComponent<Combatant>();
-        enemies.Add(enemy);
+        if (collision.gameObject.layer == enemyLayer)
+        {
+            Combatant enemy = collision.gameObject.GetComponent<Combatant>();
+            enemies.Add(enemy);
+        }
     }
 
     protected override void OnDeath()

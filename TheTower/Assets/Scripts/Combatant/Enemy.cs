@@ -44,7 +44,6 @@ public class Enemy : Combatant
     {
         if (collision.transform.name == "Tower")
         {
-            Debug.Log("Attacking Tower!");
             tower = collision.transform.GetComponent<Combatant>();
             attacking = true;
         }
