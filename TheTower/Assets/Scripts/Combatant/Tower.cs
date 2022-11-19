@@ -13,9 +13,17 @@ public class Tower : Combatant
     [SerializeField]
     private List<Combatant> enemies = new List<Combatant>();
 
+
+    //Cooldowns
     [SerializeField] private float tentacleCooldown;
     private float tentacleTime;
     [SerializeField] private TentacleSwipe tentacleSwipe;
+    [SerializeField] private float batCooldown;
+    private float batTime;
+    [SerializeField] private Bat bat;
+
+
+
     private int enemyLayer;
 
     // Start is called before the first frame update
@@ -35,14 +43,18 @@ public class Tower : Combatant
             } 
             else 
             {
-
                 //Attack(enemies[0]);
             }        
         }
         if (tentacleTime <= Time.time)
         {
             tentacleTime = Time.time + tentacleCooldown;
-            Instantiate(tentacleSwipe).Initialize(0, 359, true);
+            Instantiate(tentacleSwipe).Initialize();
+        }
+        if (batTime <= Time.time)
+        {
+            batTime = Time.time + batCooldown;
+            Instantiate(bat);
         }
     }
 

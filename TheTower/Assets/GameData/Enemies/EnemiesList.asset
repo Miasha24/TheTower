@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e66c49b17b2894fb26be9785c6d82d, type: 3}
-  m_Name: _BasicAttackProcs
+  m_Script: {fileID: 11500000, guid: 3d7465b05157d434b9404dc79b751c0c, type: 3}
+  m_Name: EnemiesList
   m_EditorClassIdentifier: 
-  emptyOnStart: 0
-  items:
-  - {fileID: 11400000, guid: 6545081231551fd46aa8bdd23d827a4a, type: 2}
-  - {fileID: 11400000, guid: e7161bf7868b82f499acf7cd28e09f0f, type: 2}
+  emptyOnStart: 1
+  items: []

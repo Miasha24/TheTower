@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class RuntimeSet<T> : ScriptableObject
+public abstract class RuntimeSet<T> : ScriptableObject, ISerializationCallbackReceiver
 {
+    [SerializeField] private bool emptyOnStart;
     public List<T> items = new List<T>();
     public void Add(T t)
     {
@@ -26,4 +27,15 @@ public abstract class RuntimeSet<T> : ScriptableObject
             items.RemoveAt(i);
         }
     }
+    public void OnAfterDeserialize()
+    {
+        if (emptyOnStart)
+        {
+            Empty();
+        }
+    }
+
+    public void OnBeforeSerialize(){}
+
+
 }

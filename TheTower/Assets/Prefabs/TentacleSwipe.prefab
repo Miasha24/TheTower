@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8467120436993303958}
   - component: {fileID: 7380742015500100649}
+  - component: {fileID: 1540412938511511320}
   m_Layer: 0
   m_Name: TentacleSwipe
   m_TagString: Untagged
@@ -46,7 +47,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: {fileID: 11400000, guid: c6d688e3c2ec0274aa30e9b89d25ef5e, type: 2}
-  speed: 1
+  speed: 40
+  turnAmount: 90
+--- !u!50 &1540412938511511320
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6271791104860314360}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6359703388340551732
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,7 +80,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4977191151978954901}
   - component: {fileID: 5315314623638110673}
-  - component: {fileID: 3930463922244840265}
   - component: {fileID: 2146080577545601842}
   m_Layer: 0
   m_Name: Square
@@ -133,27 +155,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3930463922244840265
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359703388340551732}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!61 &2146080577545601842
 BoxCollider2D:
   m_ObjectHideFlags: 0

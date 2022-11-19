@@ -3,17 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "My Assets/RuntimeSetUpgrades")]
-public class RuntimeSetUpgrades : RuntimeSet<Upgrade>, ISerializationCallbackReceiver
+[CreateAssetMenu(menuName = "My Assets/RuntimeSets/Upgrades")]
+public class RuntimeSetUpgrades : RuntimeSet<Upgrade>
 {
-    [SerializeField] private bool emptyOnStart;
-    public void OnAfterDeserialize()
-    {
-        if (emptyOnStart)
-        {
-            Empty();
-        }
-    }
 
-    public void OnBeforeSerialize() { }
 }

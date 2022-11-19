@@ -94,6 +94,8 @@ MonoBehaviour:
   enemies: []
   tentacleCooldown: 5
   tentacleSwipe: {fileID: 7380742015500100649, guid: 6451847cc81d1e941a109963af84ddeb, type: 3}
+  batCooldown: 5
+  bat: {fileID: 6803694999907483077, guid: 1bc973b3791c44249a83597f96470ac8, type: 3}
 --- !u!1 &8226978226839631636
 GameObject:
   m_ObjectHideFlags: 0
