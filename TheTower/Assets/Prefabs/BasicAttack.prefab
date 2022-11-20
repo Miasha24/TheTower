@@ -156,4 +156,4 @@ MonoBehaviour:
   damage: {fileID: 11400000, guid: c6d688e3c2ec0274aa30e9b89d25ef5e, type: 2}
   speed: {fileID: 11400000, guid: e3bfe8d46db5e0542979b5d1c694d18e, type: 2}
   procs: {fileID: 11400000, guid: 815cbdfc0bd6d7f428cb1a86e92b631d, type: 2}
-  aoe: {fileID: 2027737079052815826, guid: ca42c9412a5c145468905c6131ef52aa, type: 3}
+  bonearang: {fileID: 1765127388211494259, guid: 67abe4dc01ff4a145887065527858ad8, type: 3}

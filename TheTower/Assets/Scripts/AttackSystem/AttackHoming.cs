@@ -10,7 +10,7 @@ public class AttackHoming : Attack
     private RuntimeSetProcs procs;
 
     private Combatant target;
-
+    [SerializeField] private Bonearang bonearang;
 
     public void Initialize(Combatant target)
     {
@@ -36,6 +36,7 @@ public class AttackHoming : Attack
         if (collision.transform == target.transform)
         {
             DealDamage(target);
+            Instantiate(bonearang).Initialize(target);
             foreach (Proc proc in procs.items)
             {
                 proc.CallProc(target);

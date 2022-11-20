@@ -18,10 +18,14 @@ public class Tower : Combatant
     [SerializeField] private float tentacleCooldown;
     private float tentacleTime;
     [SerializeField] private TentacleSwipe tentacleSwipe;
+
     [SerializeField] private float batCooldown;
     private float batTime;
     [SerializeField] private Bat bat;
 
+    [SerializeField] private float boneCooldown;
+    private float boneTime;
+    [SerializeField] private Bonearang bonearang;
 
 
     private int enemyLayer;
@@ -43,7 +47,7 @@ public class Tower : Combatant
             } 
             else 
             {
-                //Attack(enemies[0]);
+                Attack(enemies[0]);
             }        
         }
         if (tentacleTime <= Time.time)

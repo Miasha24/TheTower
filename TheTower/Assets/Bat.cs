@@ -8,14 +8,24 @@ public class Bat : Attack
     [SerializeField] private float moveSpeed;
     [SerializeField] private float attackRange;
     [SerializeField] private float attackSpeed;
+    [SerializeField] private float duration;
     private Combatant target;
     private float attackNext;
+    private float durationTime;
     private bool idle = true;
     private bool attacking = false;
 
+    private void Start()
+    {
+        durationTime = Time.time + duration;
+    }
 
     protected override void UpdateAttackStatus()
     {
+        if (durationTime <= Time.time)
+        {
+            Finished();
+        }
         if (target == null)
         {
             idle = true;

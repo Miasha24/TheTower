@@ -22,7 +22,7 @@ Choosing the same upgrade twice makes it stronger.
 ------------------------------------------------------------
 
 
-Basic attack: Throws potion at closest enemy. Damages a single target
+Basic attack: Trows a glob of brew at an enemy, causing magical mayhem to erupt based on the contents of the brew!
 
 Bat attack: Summon a bat that repeatedly attacks the same enemy. Finds other enemy if target dies.
 
@@ -48,7 +48,7 @@ Hell portal: Causes a random effect each time it is opened
 Void portal: Teleports closest enemy away from the cauldron, causing it to take damage on the way
 
 Stargazing: Causes a starsign to form around some enemies, based on the sign, a different debuff is applied to the enemy
-	cancer: Causes targets to get increasingly slower to a limit.
+	cancer: Causes targets to get increasingly slower to a limit --- måske ufølsomt...
 	libra: halves the enemies health (?)
 	Aries: Pushes enemy away
 

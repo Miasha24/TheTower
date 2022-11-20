@@ -74,6 +74,7 @@
     <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSet.cs" />
     <Compile Include="Assets\Scripts\Ui\RoundTimer.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\UpgradeStat.cs" />
+    <Compile Include="Assets\test.cs" />
     <Compile Include="Assets\Scripts\Combatant\Tower.cs" />
     <Compile Include="Assets\Scripts\Ui\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\OLD\Projectile.cs" />
@@ -82,18 +83,18 @@
     <Compile Include="Assets\Scripts\Ui\CoinText.cs" />
     <Compile Include="Assets\Scripts\Ui\HealthBar.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\UpgradeExplosion.cs" />
+    <Compile Include="Assets\Bat.cs" />
     <Compile Include="Assets\Scripts\ButtonClick.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\Proc.cs" />
     <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSetUpgrades.cs" />
     <Compile Include="Assets\Scripts\Combatant\Combatant.cs" />
+    <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSetEnemies.cs" />
     <Compile Include="Assets\Scripts\TextPopup.cs" />
     <Compile Include="Assets\Scripts\GameMaster.cs" />
     <Compile Include="Assets\Scripts\Ui\PowerSelector.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\_Upgrade.cs" />
     <Compile Include="Assets\Scripts\Ui\UiText.cs" />
-    <Compile Include="Assets\test.cs" />
-    <Compile Include="Assets\Bat.cs" />
-    <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSetEnemies.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Bonearang.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Concept.txt" />
