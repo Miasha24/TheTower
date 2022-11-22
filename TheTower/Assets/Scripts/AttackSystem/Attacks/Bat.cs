@@ -15,7 +15,7 @@ public class Bat : Attack
     private bool idle = true;
     private bool attacking = false;
 
-    private void Start()
+    public override void Initialize(Combatant combatant)
     {
         durationTime = Time.time + duration;
     }

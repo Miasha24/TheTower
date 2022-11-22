@@ -42,23 +42,14 @@ public class Tower : Combatant
     {
         if (enemies.Count > 0)
         {
-            if (enemies[0].dead) {
+            if (enemies[0].dead)
+            {
                 enemies.RemoveAt(0);
-            } 
-            else 
+            }
+            else
             {
                 Attack(enemies[0]);
-            }        
-        }
-        if (tentacleTime <= Time.time)
-        {
-            tentacleTime = Time.time + tentacleCooldown;
-            Instantiate(tentacleSwipe).Initialize();
-        }
-        if (batTime <= Time.time)
-        {
-            batTime = Time.time + batCooldown;
-            Instantiate(bat);
+            }
         }
     }
 
@@ -113,12 +104,7 @@ public class Tower : Combatant
         {
             nextAttack = Time.time + (1 / attackSpeed.v);
             Instantiate(basicAttack, transform.position, Quaternion.identity, transform).Initialize(target);
-            /*
-            if (target.TakeDamage(attackDamage.v))
-            {
-                OnKill();
-            }
-            */
+
         }
     }
 }

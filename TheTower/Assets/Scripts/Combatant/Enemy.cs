@@ -6,7 +6,7 @@ public class Enemy : Combatant
 {
     private float health, healthMax, attackDamage, attackSpeed, nextAttack, moveSpeed, coinDropAmount;
     public FloatVariable baseAttackDamage, baseAttackSpeed, baseHealthMax, baseMovementSpeed, baseCoinDropAmount, targetCoinAmount;
-    public FloatingTextSpawner textSpawner;
+    [SerializeField] private FloatingTextSpawner textSpawner;
     [SerializeField] private GameEvent gameEvent;
     [SerializeField] private RuntimeSetEnemies enemiesList;
 
@@ -68,6 +68,7 @@ public class Enemy : Combatant
     public override bool TakeDamage(float amount)
     {
         health -= amount;
+
         textSpawner.InitSpawnText(transform.position, amount.ToString(), Color.white, 0);
 
         if (health <= 0)

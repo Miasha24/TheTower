@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fddf28f0b6272fd4b87bd466b5637f3e, type: 3}
-  m_Name: AoeProc
+  m_Script: {fileID: 11500000, guid: 8562da9b05645e949b059a92a8a310a5, type: 3}
+  m_Name: Bonearang
   m_EditorClassIdentifier: 
+  attack: {fileID: 1765127388211494259, guid: 67abe4dc01ff4a145887065527858ad8, type: 3}
+  procChanceInit: 20
   procChance: 20
-  attack: {fileID: 2027737079052815826, guid: ca42c9412a5c145468905c6131ef52aa, type: 3}

@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public abstract class Proc : ScriptableObject, ISerializationCallbackReceiver
+[CreateAssetMenu(menuName = "My Assets/Proc")]
+public class Proc : ScriptableObject, ISerializationCallbackReceiver
 {
-    [SerializeField]
-    private float procChanceInit;
+    [SerializeField] Attack attack;
+    [SerializeField] private float procChanceInit;
     public float procChance;
 
     public void CallProc(Combatant combatant)
     {
-        if ((Random.value * 100) <= procChance)
+        if ((Random.value * 99) < procChance)
         {
             ExecuteProc(combatant);
         }
     }
 
-    protected abstract void ExecuteProc(Combatant combatant);
+    protected void ExecuteProc(Combatant combatant)
+    {
+        Instantiate(attack, combatant.transform.position, Quaternion.identity).Initialize(combatant);
+    }
 
     public void OnBeforeSerialize() { }
 

@@ -11,8 +11,9 @@ public class TentacleSwipe : Attack
     private int layer;
     private bool negativeEnd = false;
 
-    public void Initialize()
+    public override void Initialize(Combatant combatant)
     {
+        transform.position = new Vector3(0f, 0f, 0f);
         angleStart = Random.value * 359;
         transform.eulerAngles = new Vector3(0, 0, angleStart);
         angleEnd = angleStart + turnAmount;

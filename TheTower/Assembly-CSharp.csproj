@@ -58,32 +58,30 @@
   <ItemGroup>
     <Compile Include="Assets\ScriptableObjects\FloatingTextSpawner.cs" />
     <Compile Include="Assets\ScriptableObjects\Events\GameEvent.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\AttackAoe.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Attacks\AttackAoe.cs" />
     <Compile Include="Assets\Scripts\Combatant\Enemy.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\AttackHoming.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Attacks\AttackHoming.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\UpgradeChainAttack.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\ProcBasicAttack.cs" />
     <Compile Include="Assets\Scripts\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\ScriptableObjects\Variables\IntVariable.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\Attack.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Attacks\Attack.cs" />
     <Compile Include="Assets\Scripts\GameEventListener.cs" />
     <Compile Include="Assets\ScriptableObjects\Variables\FloatVariable.cs" />
     <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSetProcs.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrader.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\TentacleSwipe.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Attacks\TentacleSwipe.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Attacks\Bonearang.cs" />
     <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSet.cs" />
     <Compile Include="Assets\Scripts\Ui\RoundTimer.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\UpgradeStat.cs" />
-    <Compile Include="Assets\test.cs" />
     <Compile Include="Assets\Scripts\Combatant\Tower.cs" />
     <Compile Include="Assets\Scripts\Ui\UpgradeButton.cs" />
     <Compile Include="Assets\Scripts\OLD\Projectile.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\ProcAoe.cs" />
     <Compile Include="Assets\Scripts\OLD\BasicAttack.cs" />
     <Compile Include="Assets\Scripts\Ui\CoinText.cs" />
     <Compile Include="Assets\Scripts\Ui\HealthBar.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\UpgradeExplosion.cs" />
-    <Compile Include="Assets\Bat.cs" />
+    <Compile Include="Assets\Scripts\AttackSystem\Attacks\Bat.cs" />
     <Compile Include="Assets\Scripts\ButtonClick.cs" />
     <Compile Include="Assets\Scripts\AttackSystem\Proc.cs" />
     <Compile Include="Assets\ScriptableObjects\RuntimeSets\RuntimeSetUpgrades.cs" />
@@ -94,7 +92,7 @@
     <Compile Include="Assets\Scripts\Ui\PowerSelector.cs" />
     <Compile Include="Assets\ScriptableObjects\Upgrades\_Upgrade.cs" />
     <Compile Include="Assets\Scripts\Ui\UiText.cs" />
-    <Compile Include="Assets\Scripts\AttackSystem\Bonearang.cs" />
+    <Compile Include="Assets\ScriptableObjects\Upgrades\UpgradeBat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Concept.txt" />

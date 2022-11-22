@@ -6,6 +6,7 @@ public abstract class Attack : MonoBehaviour
     [SerializeField]
     private FloatVariable damage;
     protected abstract void UpdateAttackStatus();
+    public abstract void Initialize(Combatant combatant);
 
     protected void DealDamage(List<Combatant> targets) {
         for (int i = targets.Count - 1; i >= 0; i--)

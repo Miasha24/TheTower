@@ -11,7 +11,22 @@ public abstract class Upgrade : ScriptableObject, ISerializationCallbackReceiver
     [SerializeField] protected int level;
     public RuntimeSetUpgrades currentUpgrades;
 
-    public abstract void ApplyUpgrade();
+    public void ApplyUpgrade()
+    {
+        if (!currentUpgrades.items.Contains(this))
+        {
+            currentUpgrades.items.Add(this);
+            FirstUpgrade();
+        }
+        else
+        {
+            NormalUpgrade();
+        }
+        level++;
+    }
+
+    protected abstract void FirstUpgrade();
+    protected abstract void NormalUpgrade();
 
     public void OnBeforeSerialize() { }
 

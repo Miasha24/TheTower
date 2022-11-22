@@ -12,9 +12,9 @@ public class AttackAoe : Attack
     private Collider2D col;
     private float detonateTime;
 
-    public void Initialize(Vector2 targetCenter)
+    public override void Initialize(Combatant combatant)
     {
-        transform.position = targetCenter;
+        transform.position = combatant.transform.position;
         transform.localScale = new Vector2(size.v, size.v);
         detonateTime = Time.time + delay.v;
     }

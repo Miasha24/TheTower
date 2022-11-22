@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9d1c629b66f3f4abcd243748d809bb, type: 3}
-  m_Name: ChainAttackProc
+  m_Script: {fileID: 11500000, guid: 8562da9b05645e949b059a92a8a310a5, type: 3}
+  m_Name: TentacleSwipe
   m_EditorClassIdentifier: 
+  attack: {fileID: 7380742015500100649, guid: 6451847cc81d1e941a109963af84ddeb, type: 3}
+  procChanceInit: 20
   procChance: 20
-  attack: {fileID: -4917947546790985940, guid: 9f454271974c53c47b1b34d81e81b6a9, type: 3}
-  radius: 10

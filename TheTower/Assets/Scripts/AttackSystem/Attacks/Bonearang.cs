@@ -11,10 +11,10 @@ public class Bonearang : Attack
     private int bounces = 0;
     private Combatant previousTarget;
     private Combatant target;
+    private const float hitDistance = 0.5f;
 
-    public void Initialize(Combatant previous)
+    public override void Initialize(Combatant previous)
     {
-
         previousTarget = previous;
         FindTarget();
     }
@@ -43,7 +43,7 @@ public class Bonearang : Attack
         {
             float step = speed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
-            if (Vector2.Distance(transform.position, target.transform.position) <= 0.5f)
+            if (Vector2.Distance(transform.position, target.transform.position) <= hitDistance)
             {
                 DealDamage(target);
                 if (bounces == bouncesMax)
